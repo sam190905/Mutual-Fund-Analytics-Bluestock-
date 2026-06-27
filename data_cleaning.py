@@ -201,11 +201,11 @@ for fname in others:
         df = pd.read_csv(src)
         out = f"{PROCESSED}/clean_{fname}"
         df.to_csv(out, index=False)
-        print(f"  ✓ {fname:<35} {str(df.shape)}")
+        print(f"   {fname:<35} {str(df.shape)}")
     else:
-        print(f"  ⚠ Not found: {src}")
+        print(f"   Not found: {src}")
 
-print("\n✓ All cleaning complete.")
+print("\n All cleaning complete.")
 print(f"\nFiles in data/processed/:")
 for f in sorted(os.listdir(PROCESSED)):
     print(f"  {f}")
